@@ -58,26 +58,31 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
 
 // Remove an edge between any two specified (by value) nodes.
 Graph.prototype.removeEdge = function(fromNode, toNode) {
-	for (var i = 0; i < this.container.length; i++) {
-    	if (this.container[i].value === fromNode) {
-      		for(var j = 0; j < this.container[i].edges.length; j++) {
-        		if(this.container[i].edges[j] === toNode) {
-        		(this.container[i].edges).splice(j,1);
-        		//console.log((this.container[i].edges));
-        		}
-      		}
-       	}
-    }
-    for (var k = 0; k < this.container.length; k++) {
-    	if (this.container[k].value === toNode) {
-      		for(var m = 0; m < this.container[k].edges.length; m++) {
-        		if(this.container[k].edges[m] === fromNode) {
-        		(this.container[k].edges).splice(m,1);
-        		//console.log((this.container[i].edges));
-        		}
-      		}
-       	}
-    }
+	if(fromNode !== undefined && toNode !== undefined) {
+		for (var i = 0; i < this.container.length; i++) {
+	    	if (this.container[i].value === fromNode) {
+	      		for(var j = 0; j < this.container[i].edges.length; j++) {
+	        		if(this.container[i].edges[j] === toNode) {
+	        		(this.container[i].edges).splice(j,1);
+	        		//console.log((this.container[i].edges));
+	        		}
+	      		}
+	       	}
+    	}
+
+	    for (var k = 0; k < this.container.length; k++) {
+	    	if (this.container[k].value === toNode) {
+	      		for(var m = 0; m < this.container[k].edges.length; m++) {
+	        		if(this.container[k].edges[m] === fromNode) {
+	        		(this.container[k].edges).splice(m,1);
+	        		//console.log((this.container[i].edges));
+	        		}
+	      		}
+	       	}
+	    }
+	}
+
+	
      
 };
 
