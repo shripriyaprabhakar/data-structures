@@ -2,7 +2,7 @@ var LinkedList = function() {
  var list = {};
  list.head = null;
  list.tail = null;
- console.log('hi');
+
 
  list.addToTail = function(value) {
    var node = new Node(value);
