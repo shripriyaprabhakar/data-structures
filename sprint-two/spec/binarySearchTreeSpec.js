@@ -5,11 +5,11 @@ describe('binarySearchTree', function() {
     binarySearchTree = new BinarySearchTree(5);
   });
 
-  // it('should have methods named "insert", "contains", and "depthFirstLog', function() {
-  //   expect(binarySearchTree.insert).to.be.a('function');
-  //   expect(binarySearchTree.contains).to.be.a('function');
-  //   expect(binarySearchTree.depthFirstLog).to.be.a('function');
-  // });
+  it('should have methods named "insert", "contains", and "depthFirstLog', function() {
+    expect(binarySearchTree.insert).to.be.a('function');
+    expect(binarySearchTree.contains).to.be.a('function');
+    expect(binarySearchTree.depthFirstLog).to.be.a('function');
+  });
 
   it('should insert values at the correct location in the tree', function() {
     binarySearchTree.insert(2);
